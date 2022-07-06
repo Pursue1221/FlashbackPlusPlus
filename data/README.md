@@ -4,4 +4,4 @@ Goto https://drive.google.com/file/d/1ba9PHPyfilTEs8dJhJVslEfWh5p4ybEg/view?usp=
 
 Extract data
 ----
-Extract the two datasets into this folder as ./data/checkins-gowalla.txt and ./data/checkins-4sq.txt
+Extract the two datasets into this folder as ./data/checkins_gowalla.txt and ./data/checkins_4sq.txt
