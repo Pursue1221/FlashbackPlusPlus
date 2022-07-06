@@ -56,7 +56,7 @@ class Setting:
         parser.add_argument('--lambda_t', default=0.0, type=float, help='decay factor for temporal data, and zero means randomly initialize the value')
         parser.add_argument('--lambda_s', default=0.0, type=float, help='decay factor for spatial data, and zero means randomly initialize the value')
         # data management
-        parser.add_argument('--dataset', default='loc-gowalla_totalCheckins_Pcore10_10.txt', type=str, help='the dataset under ./data/<dataset.txt> to load')        
+        parser.add_argument('--dataset', default='checkins_gowalla.txt', type=str, help='the dataset under ./data/<dataset.txt> to load')        
         
         # evaluation        
         parser.add_argument('--validate-epoch', default=5, type=int, help='run each validation after this amount of epochs')
