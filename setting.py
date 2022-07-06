@@ -33,7 +33,7 @@ class Setting:
         self.lambda_s = args.lambda_s
         
         # data management
-        self.dataset_file = '../data/{}'.format(args.dataset)
+        self.dataset_file = './data/{}'.format(args.dataset)
         self.max_users = 0 # 0 = use all available users
         self.sequence_length = 20
         self.batch_size = args.batch_size
