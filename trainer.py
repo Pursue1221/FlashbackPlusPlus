@@ -46,9 +46,8 @@ class FlashbackPlusPlusTrainer():
         y_t, y_s are temporal and spatial data related to the target sequence y.
         Flashback does not access y_t and y_s for prediction!
         '''
-
-        delta_t = y_t - t
-        out, h = self.model(x, delta_t, s, y_s, h, active_users)
+        self.model.eval()
+        out, h = self.model(x, t, s, y_t, y_s, h, active_users)
         out_t = out.transpose(0, 1)
         return out_t, h # model output is directly associated with the ranking per location.
     
@@ -56,8 +55,8 @@ class FlashbackPlusPlusTrainer():
         ''' takes a batch (users x location sequence)
         and corresponding targets in order to compute the training loss '''
         
-        delta_t = y_t - t
-        out, h = self.model(x, delta_t, s, y_s, h, active_users)
+        self.model.train()
+        out, h = self.model(x, t, s, y_t, y_s, h, active_users)
         out = out.view(-1, self.loc_count)
         y = y.view(-1)
         l = self.cross_entropy_loss(out, y)
