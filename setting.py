@@ -64,7 +64,7 @@ class Setting:
     
     def parse_gowalla(self, parser):
         # defaults for gowalla dataset
-        parser.add_argument('--batch-size', default=512, type=int, help='amount of users to process in one pass (batching)')
+        parser.add_argument('--batch-size', default=200, type=int, help='amount of users to process in one pass (batching)')
         parser.add_argument('--weight_decay', default=0.000001, type=float, help='weight decay regularization')
     def parse_foursquare(self, parser):
         # defaults for foursquare dataset
