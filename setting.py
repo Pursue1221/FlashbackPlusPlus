@@ -50,7 +50,7 @@ class Setting:
         # training
         parser.add_argument('--gpu', default=-1, type=int, help='the gpu to use')        
         parser.add_argument('--hidden-dim', default=10, type=int, help='hidden dimensions to use')
-        parser.add_argument('--lr', default = 0.01, type=float, help='learning rate')
+        parser.add_argument('--lr', default = 0.05, type=float, help='learning rate')
         parser.add_argument('--epochs', default=100, type=int, help='amount of epochs')
         parser.add_argument('--rnn', default='rnn', type=str, help='the RNN implementation to use: [rnn|gru|lstm]')        
         parser.add_argument('--lambda_t', default=0.0, type=float, help='decay factor for temporal data, and zero means randomly initialize the value')
