@@ -29,7 +29,7 @@ h0_strategy = create_h0_strategy(setting.hidden_dim, setting.is_lstm)
 print('{} {}'.format(trainer.greeter(), setting.rnn_factory.greeter()))
 
 optimizer = torch.optim.Adam(trainer.parameters(), lr = setting.learning_rate, weight_decay = setting.weight_decay)
-scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[20,40,60,80], gamma=0.2)
+scheduler=torch.optim.lr_scheduler.ExponentialLR(optimizer,gamma=0.95)
 
 def evaluate_test():
     dataset_test.reset()
