@@ -6,9 +6,10 @@ Download and store dataset files under ./data/ (instructions in ./data/README.md
 ```
 Run python train.py [--dataset NAME].
 ```
-==== -->
+
 Reference
 ----
+If you use our code or datasets, please cite:
 ```
 @article{deng2023robust,
   title={Robust Location Prediction over Sparse Spatiotemporal Trajectory Data: Flashback to the Right Moment!},
